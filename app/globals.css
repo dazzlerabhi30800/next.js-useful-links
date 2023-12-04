@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --font-poppins: "Poppins", sans-serif;
+    --font-playpen: "Playpen Sans", sans-serif;
+}
+
+
+body {
+    background: linear-gradient(to bottom, #090f12, #131823);
+    min-height: 100vh;
+    color: #fff;
+    font-family: var(--font-poppins);
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-poppins);
+    font-size: clamp(1.5rem, 2.3vw, 2.4rem);
+    width: fit-content;
+    background: linear-gradient(to left, #4ff5f5, rgb(246, 97, 199));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: headingAnim 15s linear infinite;
+
+}
+
+
+
+@keyframes headingAnim {
+    0% {
+        background-position: 150vh;
+    }
+
+    100% {
+        background-position: 0vh;
+    }
+}

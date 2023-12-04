@@ -5,3 +5,17 @@
   align-items: center;
   min-height: 100vh;
 }
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  gap: 1rem;
+  align-items: center;
+}
+
+
+.infoPara {
+  font-family: var(--font-playpen);
+  font-size: 1.2rem;
+}
