@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 
 :root {
@@ -12,21 +7,32 @@
     --font-playpen: "Playpen Sans", sans-serif;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-playpen);
+}
 
 body {
     background: linear-gradient(to bottom, #090f12, #131823);
+    overflow-x: hidden;
     min-height: 100vh;
     color: #fff;
-    font-family: var(--font-poppins);
     text-align: center;
 }
+
 
 main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 1rem 0;
+    padding: 1rem;
+    position: relative;
+    align-items: center;
+    min-height: 100vh;
 }
+
 
 h1,
 h2,
@@ -34,16 +40,74 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-poppins);
-    font-size: clamp(1.5rem, 2.3vw, 2.4rem);
+    font-size: clamp(1.2rem, 2vw + 2px, 1.6rem);
     width: fit-content;
-    background: linear-gradient(to left, #4ff5f5, rgb(246, 97, 199));
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: headingAnim 15s linear infinite;
 
 }
 
+
+h1 {
+    background: linear-gradient(to left, #4ff5f5, rgb(246, 97, 199));
+    font-family: var(--font-poppins);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: headingAnim 15s linear infinite;
+    font-size: clamp(1.5rem, 2.3vw, 2.4rem);
+}
+
+
+/* Links Page Styling */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+
+.link-outline {
+    padding: 4px;
+    border-radius: 10px;
+    background: linear-gradient(to left, rgb(35, 229, 239), #ee1b8f);
+}
+
+.sub-link {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    text-align: left;
+    background: linear-gradient(to right, #152127, #211118);
+    max-width: 1000px;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+
+button {
+    outline: none;
+    width: fit-content;
+    border: none;
+}
+
+.clipboard-btn {
+    border-radius: 5px;
+    padding: 5px 8px;
+    background: transparent;
+    --button-color: rgb(174, 237, 247);
+    color: var(--button-color);
+    border: 2px solid var(--button-color);
+}
+
+.clipboard-symbol {
+    --icon_dimension: var(--icon-dimension, 22px);
+    width: var(--icon_dimension);
+    height: var(--icon_dimension);
+}
+
+a {
+    color: #fff;
+}
 
 
 @keyframes headingAnim {
@@ -53,5 +117,17 @@ h6 {
 
     100% {
         background-position: 0vh;
+    }
+}
+
+
+@media (hover:hover) {
+    button {
+        cursor: pointer;
+        transition: 0.3s linear;
+    }
+
+    .clipboard-btn:hover {
+        --button-color: #f1a04f;
     }
 }
