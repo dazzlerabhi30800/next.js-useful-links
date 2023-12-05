@@ -184,7 +184,7 @@ a {
     color: var(--font-color);
     padding: 0.5rem 0.6rem;
     bottom: 20px;
-    left: 20px;
+    right: 20px;
     border-radius: 5px;
     border: 2px solid var(--toggle-border);
 }
@@ -202,8 +202,9 @@ a {
 
     .clipboard-btn:active {
         transform: translate(5px, 5px);
-        box-shadow: none;
     }
+
+    box-shadow: none;
 
     .theme-light .clipboard-btn:hover {
         --clipboard-button-color: #151515;
