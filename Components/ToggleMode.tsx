@@ -6,16 +6,6 @@ export default function ToggleMode() {
   // this will the set the theme for the website default is false i.e dark theme
   const [mode, setMode] = useState<boolean | null | string>(false);
 
-
-  useEffect(() => {
-    const modeValue = window.localStorage ? JSON.parse(window.localStorage.getItem('mode') || "") : null;
-    console.log(modeValue);
-    if (modeValue && window.localStorage) {
-      setMode(prev => prev = modeValue);
-    }
-  }, [])
-
-
   useEffect(() => {
     if (mode) {
       document.documentElement.classList.add("theme-light");
