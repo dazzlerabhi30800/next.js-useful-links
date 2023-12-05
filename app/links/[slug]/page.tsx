@@ -1,16 +1,14 @@
 "use client";
 import { ClipboardDocumentListIcon } from "@heroicons/react/20/solid"
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Alert from "./Alert";
 import { convertToCamelCase, fetchData, handleShow } from "@/data/Funcs";
-import data from '@/data/links.json';
 import { linkInterface } from "@/type";
 
 export default function LinkComp({ params: { slug } }: { params: { slug: string } }) {
     const [show, setShow] = useState<boolean>(false);
 
-    // function to copy text to clipboard
     if (!slug) return false;
     return (
         <main>
