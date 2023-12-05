@@ -8,7 +8,7 @@ export default function ToggleMode() {
 
 
   useEffect(() => {
-    const modeValue = typeof window !== 'undefined' && window.localStorage ? JSON.parse(window.localStorage.getItem('mode') || "") : null;
+    const modeValue = window.localStorage ? JSON.parse(window.localStorage.getItem('mode') || "") : null;
     console.log(modeValue);
     if (modeValue && window.localStorage) {
       setMode(prev => prev = modeValue);
