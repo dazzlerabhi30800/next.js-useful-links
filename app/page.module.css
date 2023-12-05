@@ -32,7 +32,7 @@
   border-radius: 10px;
   font-weight: 500;
   align-items: flex-start;
-  background: linear-gradient(to left, #ff8ab9, #f7c594);
+  background: var(--link-comp-background);
   color: #000;
 }
 
@@ -75,7 +75,7 @@
 .gradientLine {
   width: 100%;
   height: 3px;
-  background: linear-gradient(to left, #5ab7f5, rgb(255, 0, 115));
+  background: var(--gradient-line);
   border-radius: 5px;
 }
 

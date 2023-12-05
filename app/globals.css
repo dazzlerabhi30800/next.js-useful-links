@@ -5,7 +5,16 @@
 :root {
     --font-poppins: "Poppins", sans-serif;
     --font-playpen: "Playpen Sans", sans-serif;
+    --main-background: linear-gradient(to bottom, #090f12, #131823);
+    --heading-gradient-background: linear-gradient(to left, #4ff5f5, rgb(246, 97, 199));
+    --font-color: #fff;
+    --link-comp-background: linear-gradient(to left, #ff8ab9, #f7c594);
+    --gradient-line: linear-gradient(to left, #5ab7f5, rgb(255, 0, 115));
+    --link-page-comp-outline: linear-gradient(to left, rgb(35, 229, 239), #ee1b8f);
+    --sub-link-background: linear-gradient(to right, #152127, #211118);
+    --clipboard-button-color: rgb(174, 237, 247);
 }
+
 
 * {
     margin: 0;
@@ -15,11 +24,12 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #090f12, #131823);
+    background: var(--main-background);
     overflow-x: hidden;
     min-height: 100vh;
     color: #fff;
     text-align: center;
+    color: var(--font-color);
 }
 
 
@@ -47,7 +57,7 @@ h6 {
 
 
 h1 {
-    background: linear-gradient(to left, #4ff5f5, rgb(246, 97, 199));
+    background: var(--heading-gradient-background);
     font-family: var(--font-poppins);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -59,26 +69,32 @@ h1 {
 /* Links Page Styling */
 .links-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1.5rem;
+    width: 100%;
     margin: 1rem 0;
 }
 
 
 .link-outline {
     padding: 4px;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: min(100%, 300px);
     border-radius: 10px;
-    background: linear-gradient(to left, rgb(35, 229, 239), #ee1b8f);
+    background: var(--link-page-comp-outline);
 }
 
 .sub-link {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
     flex-direction: column;
     gap: 1rem;
-    width: 100%;
+    width: clamp(auto, 100%, 800px);
     text-align: left;
-    background: linear-gradient(to right, #152127, #211118);
-    max-width: 1000px;
+    background: var(--sub-link-background);
     border-radius: 8px;
     padding: 1rem;
 }
@@ -98,9 +114,9 @@ button {
     border-radius: 5px;
     padding: 5px 8px;
     background: transparent;
-    --button-color: rgb(174, 237, 247);
-    color: var(--button-color);
-    border: 2px solid var(--button-color);
+    box-shadow: 3px 3px 0px 1px var(--clipboard-button-color);
+    color: var(--clipboard-button-color) !important;
+    border: 2px solid var(--clipboard-button-color)
 }
 
 .clipboard-symbol {
@@ -132,6 +148,19 @@ a {
     }
 
     .clipboard-btn:hover {
-        --button-color: #f1a04f;
+        --clipboard-button-color: #f1a04f;
+    }
+
+    .clipboard-btn:active {
+        transform: translate(5px, 5px);
+        box-shadow: none;
+    }
+}
+
+
+@media Screen and (min-width: 750px) {
+    .links-container {
+        margin: 2rem auto;
+        width: 75%;
     }
 }

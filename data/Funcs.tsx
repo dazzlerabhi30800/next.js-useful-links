@@ -11,11 +11,14 @@ export function convertToCamelCase(str: string) {
 
 
 export function handleShow(link: string, setShow: Dispatch<SetStateAction<boolean>>) {
+    let showTimeout: any;
+    setShow(prevState => prevState = false);
     navigator.clipboard.writeText(link);
     setShow(prevState => prevState = true);
-    setTimeout(() => {
+    showTimeout = setTimeout(() => {
         setShow(prevState => prevState = false);
     }, 3000);
+    return () => clearTimeout(showTimeout);
 }
 
 
