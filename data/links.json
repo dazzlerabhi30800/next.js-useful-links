@@ -1,0 +1,58 @@
+{
+    "linkList": [
+        {
+            "title": "Personal Social Links",
+            "name": "Social Links",
+            "link": "/links/social-links"
+        },
+        {
+            "title": "Useful Github Repository",
+            "name": "Github Repos",
+            "link": "/links/github-repos"
+        }
+    ],
+    "sociallinks": [
+        {
+            "name": "LinkedIn Profile",
+            "link": "https://www.linkedin.com/in/abhishek-choudhary-00679621b/"
+        },
+        {
+            "name": "Github Profile",
+            "link": "https://github.com/dazzlerabhi30800"
+        },
+        {
+            "name": "Twitter Profile",
+            "link": "https://twitter.com/Abhishek30800"
+        },
+        {
+            "name": "Codepen Profile",
+            "link": "https://codepen.io/dazzlerabhi30800"
+        },
+        {
+            "name": "ICodeThis Website",
+            "link": "https://icodethis.com/abhishek30800"
+        },
+        {
+            "name": "Frontend Mentor Website",
+            "link": "https://www.frontendmentor.io/profile/dazzlerabhi30800"
+        }
+    ],
+    "githubrepos": [
+        {
+            "name": "DSA Repo",
+            "link": "https://github.com/dazzlerabhi30800/DSA-Practice"
+        },
+        {
+            "name": "Portfolio Repo",
+            "link": "https://github.com/dazzlerabhi30800/portfolio-website-2"
+        },
+        {
+            "name": "ICodeThis Projects Repo",
+            "link": "https://github.com/dazzlerabhi30800/ICode-This-Projects"
+        },
+        {
+            "name": "Javascript 30",
+            "link": "https://github.com/dazzlerabhi30800/javascript-30"
+        }
+    ]
+}

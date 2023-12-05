@@ -52,7 +52,7 @@ h1 {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: headingAnim 15s linear infinite;
-    font-size: clamp(1.5rem, 2.3vw, 2.4rem);
+    font-size: clamp(1.7rem, 2.3vw, 2.6rem);
 }
 
 
@@ -81,6 +81,10 @@ h1 {
     max-width: 1000px;
     border-radius: 8px;
     padding: 1rem;
+}
+
+.sub-link a {
+    font-size: clamp(0.9rem, 1.3vw + 2px, 1rem);
 }
 
 
