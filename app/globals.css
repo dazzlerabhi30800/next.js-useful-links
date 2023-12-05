@@ -8,11 +8,47 @@
     --main-background: linear-gradient(to bottom, #090f12, #131823);
     --heading-gradient-background: linear-gradient(to left, #4ff5f5, rgb(246, 97, 199));
     --font-color: #fff;
+    --link-comp-color: #000;
     --link-comp-background: linear-gradient(to left, #ff8ab9, #f7c594);
     --gradient-line: linear-gradient(to left, #5ab7f5, rgb(255, 0, 115));
     --link-page-comp-outline: linear-gradient(to left, rgb(35, 229, 239), #ee1b8f);
     --sub-link-background: linear-gradient(to right, #152127, #211118);
     --clipboard-button-color: rgb(174, 237, 247);
+    --alert-container-background: #182730;
+    --alert-container-border-color: transparent;
+
+
+    /* Toggle button */
+    --toggle-button-background: #294557;
+    --toggle-border: #f5cde8;
+}
+
+
+.theme-light {
+    --main-background: linear-gradient(to bottom, #dfe1e1, #dadadc);
+    --font-poppins: "Poppins", sans-serif;
+    --font-playpen: "Playpen Sans", sans-serif;
+    --dark-gray: rgb(58, 59, 59);
+    --heading-gradient-background: var(--dark-gray);
+    --font-color: var(--dark-gray);
+    --link-comp-color: var(--dark-gray);
+    --link-comp-background: transparent;
+    --gradient-line: linear-gradient(to left, var(--dark-gray), var(--dark-gray));
+    --link-page-comp-outline: linear-gradient(to left, var(--dark-gray), var(--dark-gray));
+    --sub-link-background: linear-gradient(to right, #e0e1e3, #e3e2e2);
+    --clipboard-button-color: var(--dark-gray);
+    --alert-container-background: transparent;
+    --alert-container-border-color: var(--dark-gray);
+
+
+
+    /* Toggle button */
+    --toggle-button-background: #d9dadb;
+    --toggle-border: var(--dark-gray);
+}
+
+.theme-light h1 {
+    animation: none;
 }
 
 
@@ -26,6 +62,7 @@
 body {
     background: var(--main-background);
     overflow-x: hidden;
+    position: relative;
     min-height: 100vh;
     color: #fff;
     text-align: center;
@@ -38,7 +75,6 @@ main {
     flex-direction: column;
     gap: 2rem;
     padding: 1rem;
-    position: relative;
     align-items: center;
     min-height: 100vh;
 }
@@ -91,8 +127,7 @@ h1 {
     width: 100%;
     justify-content: space-between;
     flex-direction: column;
-    gap: 1rem;
-    width: clamp(auto, 100%, 800px);
+    gap: 1.1rem;
     text-align: left;
     background: var(--sub-link-background);
     border-radius: 8px;
@@ -126,7 +161,8 @@ button {
 }
 
 a {
-    color: #fff;
+    color: var(--font-color);
+
 }
 
 
@@ -138,6 +174,19 @@ a {
     100% {
         background-position: 0vh;
     }
+}
+
+
+/* Mode Toggler Button */
+.mode-toggler {
+    position: fixed;
+    background: var(--toggle-button-background);
+    color: var(--font-color);
+    padding: 0.5rem 0.6rem;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--toggle-border);
 }
 
 
@@ -155,11 +204,21 @@ a {
         transform: translate(5px, 5px);
         box-shadow: none;
     }
+
+    .theme-light .clipboard-btn:hover {
+        --clipboard-button-color: #151515;
+    }
+
+
+    .theme-light a:hover {
+        color: #000;
+    }
 }
 
 
 @media Screen and (min-width: 750px) {
     .links-container {
+        gap: 2.5rem;
         margin: 2rem auto;
         width: 75%;
     }
