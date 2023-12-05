@@ -202,9 +202,9 @@ a {
 
     .clipboard-btn:active {
         transform: translate(5px, 5px);
+        box-shadow: none;
     }
 
-    box-shadow: none;
 
     .theme-light .clipboard-btn:hover {
         --clipboard-button-color: #151515;
