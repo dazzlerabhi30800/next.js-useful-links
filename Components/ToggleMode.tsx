@@ -4,7 +4,13 @@ import { useEffect, useState } from "react";
 
 export default function ToggleMode() {
   // this will the set the theme for the website default is false i.e dark theme
-  const [mode, setMode] = useState<boolean | null | string>(false);
+  const modeValue = typeof window !== "undefined" && window.localStorage.getItem("mode") ? JSON.parse(window.localStorage.getItem("mode") || "") : false;
+  const [mode, setMode] = useState<boolean | null | string>(modeValue);
+  const [isClient, setIsClient] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, [])
 
   useEffect(() => {
     if (mode) {
@@ -18,6 +24,8 @@ export default function ToggleMode() {
   }, [mode])
 
 
+
+  if (!isClient) return false;
   return (
     <button onClick={() => setMode(prev => !prev)} className="mode-toggler">
       {mode ? (
