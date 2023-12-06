@@ -8,10 +8,10 @@ export default function ToggleMode() {
 
   useEffect(() => {
     if (mode) {
-      document.documentElement.classList.add("theme-light");
+      document.documentElement.classList.add("theme-dark");
     }
     else {
-      document.documentElement.classList.remove("theme-light");
+      document.documentElement.classList.remove("theme-dark");
     }
 
     window.localStorage.setItem('mode', JSON.stringify(mode));
@@ -21,9 +21,9 @@ export default function ToggleMode() {
   return (
     <button onClick={() => setMode(prev => !prev)} className="mode-toggler">
       {mode ? (
-        <MoonIcon width={30} height={30} />
-      ) : (
         <SunIcon width={30} height={30} />
+      ) : (
+        <MoonIcon width={30} height={30} />
       )}
     </button>
   );

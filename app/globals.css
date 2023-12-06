@@ -5,29 +5,7 @@
 :root {
     --font-poppins: "Poppins", sans-serif;
     --font-playpen: "Playpen Sans", sans-serif;
-    --main-background: linear-gradient(to bottom, #090f12, #131823);
-    --heading-gradient-background: linear-gradient(to left, #4ff5f5, rgb(246, 97, 199));
-    --font-color: #fff;
-    --link-comp-color: #000;
-    --link-comp-background: linear-gradient(to left, #ff8ab9, #f7c594);
-    --gradient-line: linear-gradient(to left, #5ab7f5, rgb(255, 0, 115));
-    --link-page-comp-outline: linear-gradient(to left, rgb(35, 229, 239), #ee1b8f);
-    --sub-link-background: linear-gradient(to right, #152127, #211118);
-    --clipboard-button-color: rgb(174, 237, 247);
-    --alert-container-background: #182730;
-    --alert-container-border-color: transparent;
-
-
-    /* Toggle button */
-    --toggle-button-background: #294557;
-    --toggle-border: #f5cde8;
-}
-
-
-.theme-light {
     --main-background: linear-gradient(to bottom, #dfe1e1, #dadadc);
-    --font-poppins: "Poppins", sans-serif;
-    --font-playpen: "Playpen Sans", sans-serif;
     --dark-gray: rgb(58, 59, 59);
     --heading-gradient-background: var(--dark-gray);
     --font-color: var(--dark-gray);
@@ -45,6 +23,36 @@
     /* Toggle button */
     --toggle-button-background: #d9dadb;
     --toggle-border: var(--dark-gray);
+
+
+
+    /* Sub Card Box Shadow Color */
+    --sub-link-box-shadow: rgba(39, 39, 39, 0.501);
+}
+
+
+.theme-dark {
+
+    --main-background: linear-gradient(to bottom, #090f12, #131823);
+    --heading-gradient-background: linear-gradient(to left, #4ff5f5, rgb(246, 97, 199));
+    --font-color: #fff;
+    --link-comp-color: #000;
+    --link-comp-background: linear-gradient(to left, #ff8ab9, #f7c594);
+    --gradient-line: linear-gradient(to left, #5ab7f5, rgb(255, 0, 115));
+    --link-page-comp-outline: linear-gradient(to left, rgb(35, 229, 239), #ee1b8f);
+    --sub-link-background: linear-gradient(to right, #152127, #211118);
+    --clipboard-button-color: rgb(174, 237, 247);
+    --alert-container-background: #182730;
+    --alert-container-border-color: transparent;
+
+
+    /* Toggle button */
+    --toggle-button-background: #294557;
+    --toggle-border: #f5cde8;
+
+
+    /* Sub Card Box Shadow Color */
+    --sub-link-box-shadow: transparent;
 }
 
 .theme-light h1 {
@@ -94,7 +102,7 @@ h6 {
 
 h1 {
     background: var(--heading-gradient-background);
-    font-family: var(--font-poppins);
+    font-family: var(--font-playpen);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: headingAnim 15s linear infinite;
@@ -197,7 +205,7 @@ a {
     }
 
     .clipboard-btn:hover {
-        --clipboard-button-color: #f1a04f;
+        --clipboard-button-color: #151515;
     }
 
     .clipboard-btn:active {
@@ -206,12 +214,12 @@ a {
     }
 
 
-    .theme-light .clipboard-btn:hover {
-        --clipboard-button-color: #151515;
+    .theme-dark .clipboard-btn:hover {
+        --clipboard-button-color: #f1a04f;
     }
 
 
-    .theme-light a:hover {
+    a:hover {
         color: #000;
     }
 }
