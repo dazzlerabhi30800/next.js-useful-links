@@ -5,7 +5,7 @@ This is Link Portfolio is collection of all my useful links as it's very repeati
 ## Tech Stack 
 - Next.js
 - Typscript
-- HeroIcons(for icons) 
+- Heroicons(for icons) 
 
 ## How to run
 1. Fork or clone the repository & then in the root director run command ```npm install``` wait for it to complete.
@@ -14,7 +14,6 @@ This is Link Portfolio is collection of all my useful links as it's very repeati
 ## Live Preview [Live Site](https://next-js-useful-links.vercel.app/)
 
 ## Preview
-
 ### Light Mode
 ![Light Mode](./public/light-mode.png)
 
