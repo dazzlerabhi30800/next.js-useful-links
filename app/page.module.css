@@ -86,6 +86,13 @@
 }
 
 
+@media (hover:hover) {
+  .link a:hover {
+    color: var(--link-hover-color);
+  }
+
+}
+
 @keyframes line {
   100% {
     width: 0%;

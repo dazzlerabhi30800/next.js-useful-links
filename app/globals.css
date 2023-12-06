@@ -33,16 +33,16 @@
 .theme-dark {
 
     --main-background: linear-gradient(to bottom, #090f12, #131823);
-    --heading-gradient-background: linear-gradient(to left, #4ff5f5, rgb(246, 97, 199));
+    --heading-gradient-background: linear-gradient(to left, #68f1f1, #f25ac2);
     --font-color: #fff;
-    --link-comp-color: #000;
-    --link-comp-background: linear-gradient(to left, #ff8ab9, #f7c594);
+    --link-comp-color: #ffffff;
+    --link-comp-background: transparent;
     --gradient-line: linear-gradient(to left, #5ab7f5, rgb(255, 0, 115));
     --link-page-comp-outline: linear-gradient(to left, rgb(35, 229, 239), #ee1b8f);
     --sub-link-background: linear-gradient(to right, #152127, #211118);
     --clipboard-button-color: rgb(174, 237, 247);
     --alert-container-background: #182730;
-    --alert-container-border-color: transparent;
+    --alert-container-border-color: rgb(163, 236, 246);
 
 
     /* Toggle button */
@@ -57,7 +57,7 @@
     --link-hover-color: #cec9c9;
 }
 
-.theme-light h1 {
+.h1 {
     animation: none;
 }
 
