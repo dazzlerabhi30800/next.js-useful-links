@@ -22,6 +22,11 @@
 
     /* Sub Card Box Shadow Color */
     --sub-link-box-shadow: rgba(39, 39, 39, 0.501);
+
+
+    --link-hover-color: #000;
+
+
 }
 
 
@@ -47,6 +52,9 @@
 
     /* Sub Card Box Shadow Color */
     --sub-link-box-shadow: transparent;
+
+
+    --link-hover-color: #cec9c9;
 }
 
 .theme-light h1 {
@@ -212,7 +220,7 @@ a {
 
 
     a:hover {
-        color: #000;
+        color: var(--link-hover-color);
     }
 }
 
