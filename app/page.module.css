@@ -8,7 +8,6 @@
 
 
 .infoPara {
-  font-family: var(--font-playpen);
   font-size: 1.2rem;
 }
 
@@ -44,7 +43,6 @@
 
 .link a {
   font-style: italic;
-  font-family: var(--font-playpen);
   color: var(--link-comp-color);
 }
 
