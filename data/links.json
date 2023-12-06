@@ -33,6 +33,10 @@
             "link": "https://icodethis.com/abhishek30800"
         },
         {
+            "name": "Portfolio Website",
+            "link": "https://abhishek-choudhary-portfolio-nu.vercel.app/"
+        },
+        {
             "name": "Frontend Mentor Website",
             "link": "https://www.frontendmentor.io/profile/dazzlerabhi30800"
         },
@@ -93,6 +97,10 @@
         {
             "name": "E-commerce in Next.js Typescript using Stripe",
             "link": "https://github.com/dazzlerabhi30800/ecommerce-store-in-ts-next.js"
+        },
+        {
+            "name": "Tic Tack Toe in React",
+            "link": "https://github.com/dazzlerabhi30800/tic-toe-game-react"
         }
     ]
 }
