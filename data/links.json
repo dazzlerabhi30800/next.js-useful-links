@@ -35,6 +35,22 @@
         {
             "name": "Frontend Mentor Website",
             "link": "https://www.frontendmentor.io/profile/dazzlerabhi30800"
+        },
+        {
+            "name": "Gmail abhisingh72065",
+            "link": "https://mail.google.com/mail/u/1/#inbox"
+        },
+        {
+            "name": "Gmail abhisingh30800",
+            "link": "https://mail.google.com/mail/u/0/#inbox"
+        },
+        {
+            "name": "Hirist Job Hiring",
+            "link": "https://www.hirist.com/myprofile?pref=LinkedIn"
+        },
+        {
+            "name": "Cutshort Job Hiring",
+            "link": "https://cutshort.io/profile/candidate-settings/profile"
         }
     ],
     "githubrepos": [
@@ -53,6 +69,30 @@
         {
             "name": "Javascript 30",
             "link": "https://github.com/dazzlerabhi30800/javascript-30"
+        },
+        {
+            "name": "Spotify Clone",
+            "link": "https://github.com/dazzlerabhi30800/music-app-ReactJS"
+        },
+        {
+            "name": "Rocks, Paper & Scissors Game",
+            "link": "https://github.com/dazzlerabhi30800/fontendMentor-Rock-paper-scissors-game-in-Next.js"
+        },
+        {
+            "name": "Chatty Chat App",
+            "link": "https://github.com/dazzlerabhi30800/chat-app-using-google-auth"
+        },
+        {
+            "name": "Todo App in Typescript",
+            "link": "https://github.com/dazzlerabhi30800/todoApp-in-typescript"
+        },
+        {
+            "name": "E-commerce Store in React using Google Auth",
+            "link": "https://github.com/dazzlerabhi30800/ecommerce-app-with-firebase"
+        },
+        {
+            "name": "E-commerce in Next.js Typescript using Stripe",
+            "link": "https://github.com/dazzlerabhi30800/ecommerce-store-in-ts-next.js"
         }
     ]
 }
