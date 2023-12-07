@@ -1,110 +1,121 @@
 {
-    "linkList": [
-        {
-            "title": "Personal Social Links",
-            "name": "Social Links",
-            "link": "/links/social-links"
-        },
-        {
-            "title": "Useful Github Repository",
-            "name": "Github Repos",
-            "link": "/links/github-repos"
-        }
-    ],
-    "sociallinks": [
-        {
-            "name": "LinkedIn Profile",
-            "link": "https://www.linkedin.com/in/abhishek-choudhary-00679621b/"
-        },
-        {
-            "name": "Github Profile",
-            "link": "https://github.com/dazzlerabhi30800"
-        },
-        {
-            "name": "Twitter Profile",
-            "link": "https://twitter.com/Abhishek30800"
-        },
-        {
-            "name": "Codepen Profile",
-            "link": "https://codepen.io/dazzlerabhi30800"
-        },
-        {
-            "name": "ICodeThis Website",
-            "link": "https://icodethis.com/abhishek30800"
-        },
-        {
-            "name": "Portfolio Website",
-            "link": "https://abhishek-choudhary-portfolio-nu.vercel.app/"
-        },
-        {
-            "name": "Frontend Mentor Website",
-            "link": "https://www.frontendmentor.io/profile/dazzlerabhi30800"
-        },
-        {
-            "name": "Gmail abhisingh72065",
-            "link": "https://mail.google.com/mail/u/1/#inbox"
-        },
-        {
-            "name": "Gmail abhisingh30800",
-            "link": "https://mail.google.com/mail/u/0/#inbox"
-        },
-        {
-            "name": "Hirist Job Hiring",
-            "link": "https://www.hirist.com/myprofile?pref=LinkedIn"
-        },
-        {
-            "name": "Cutshort Job Hiring",
-            "link": "https://cutshort.io/profile/candidate-settings/profile"
-        },
-        {
-            "name": "Wellfound Job Hiring",
-            "link": "https://wellfound.com/profile/edit"
-        }
-    ],
-    "githubrepos": [
-        {
-            "name": "DSA Repo",
-            "link": "https://github.com/dazzlerabhi30800/DSA-Practice"
-        },
-        {
-            "name": "Portfolio Repo",
-            "link": "https://github.com/dazzlerabhi30800/portfolio-website-2"
-        },
-        {
-            "name": "ICodeThis Projects Repo",
-            "link": "https://github.com/dazzlerabhi30800/ICode-This-Projects"
-        },
-        {
-            "name": "Javascript 30",
-            "link": "https://github.com/dazzlerabhi30800/javascript-30"
-        },
-        {
-            "name": "Spotify Clone",
-            "link": "https://github.com/dazzlerabhi30800/music-app-ReactJS"
-        },
-        {
-            "name": "Rocks, Paper & Scissors Game",
-            "link": "https://github.com/dazzlerabhi30800/fontendMentor-Rock-paper-scissors-game-in-Next.js"
-        },
-        {
-            "name": "Chatty Chat App",
-            "link": "https://github.com/dazzlerabhi30800/chat-app-using-google-auth"
-        },
-        {
-            "name": "Todo App in Typescript",
-            "link": "https://github.com/dazzlerabhi30800/todoApp-in-typescript"
-        },
-        {
-            "name": "E-commerce Store in React using Google Auth",
-            "link": "https://github.com/dazzlerabhi30800/ecommerce-app-with-firebase"
-        },
-        {
-            "name": "E-commerce in Next.js Typescript using Stripe",
-            "link": "https://github.com/dazzlerabhi30800/ecommerce-store-in-ts-next.js"
-        },
-        {
-            "name": "Tic Tack Toe in React",
-            "link": "https://github.com/dazzlerabhi30800/tic-toe-game-react"
-        }
-    ]
+  "linkList": [
+    {
+      "title": "Personal Social Links",
+      "name": "Social Links",
+      "link": "/links/social-links"
+    },
+    {
+      "title": "Useful Github Repository",
+      "name": "Github Repos",
+      "link": "/links/github-repos"
+    },
+    {
+      "title": "Course Certifications",
+      "name": "Certifications",
+      "link": "/links/certifications"
+    }
+  ],
+  "sociallinks": [
+    {
+      "name": "LinkedIn Profile",
+      "link": "https://www.linkedin.com/in/abhishek-choudhary-00679621b/"
+    },
+    {
+      "name": "Github Profile",
+      "link": "https://github.com/dazzlerabhi30800"
+    },
+    {
+      "name": "Twitter Profile",
+      "link": "https://twitter.com/Abhishek30800"
+    },
+    {
+      "name": "Codepen Profile",
+      "link": "https://codepen.io/dazzlerabhi30800"
+    },
+    {
+      "name": "ICodeThis Website",
+      "link": "https://icodethis.com/abhishek30800"
+    },
+    {
+      "name": "Portfolio Website",
+      "link": "https://abhishek-choudhary-portfolio-nu.vercel.app/"
+    },
+    {
+      "name": "Frontend Mentor Website",
+      "link": "https://www.frontendmentor.io/profile/dazzlerabhi30800"
+    },
+    {
+      "name": "Gmail abhisingh72065",
+      "link": "https://mail.google.com/mail/u/1/#inbox"
+    },
+    {
+      "name": "Gmail abhisingh30800",
+      "link": "https://mail.google.com/mail/u/0/#inbox"
+    },
+    {
+      "name": "Hirist Job Hiring",
+      "link": "https://www.hirist.com/myprofile?pref=LinkedIn"
+    },
+    {
+      "name": "Cutshort Job Hiring",
+      "link": "https://cutshort.io/profile/candidate-settings/profile"
+    },
+    {
+      "name": "Wellfound Job Hiring",
+      "link": "https://wellfound.com/profile/edit"
+    }
+  ],
+  "githubrepos": [
+    {
+      "name": "DSA Repo",
+      "link": "https://github.com/dazzlerabhi30800/DSA-Practice"
+    },
+    {
+      "name": "Portfolio Repo",
+      "link": "https://github.com/dazzlerabhi30800/portfolio-website-2"
+    },
+    {
+      "name": "ICodeThis Projects Repo",
+      "link": "https://github.com/dazzlerabhi30800/ICode-This-Projects"
+    },
+    {
+      "name": "Javascript 30",
+      "link": "https://github.com/dazzlerabhi30800/javascript-30"
+    },
+    {
+      "name": "Spotify Clone",
+      "link": "https://github.com/dazzlerabhi30800/music-app-ReactJS"
+    },
+    {
+      "name": "Rocks, Paper & Scissors Game",
+      "link": "https://github.com/dazzlerabhi30800/fontendMentor-Rock-paper-scissors-game-in-Next.js"
+    },
+    {
+      "name": "Chatty Chat App",
+      "link": "https://github.com/dazzlerabhi30800/chat-app-using-google-auth"
+    },
+    {
+      "name": "Todo App in Typescript",
+      "link": "https://github.com/dazzlerabhi30800/todoApp-in-typescript"
+    },
+    {
+      "name": "E-commerce Store in React using Google Auth",
+      "link": "https://github.com/dazzlerabhi30800/ecommerce-app-with-firebase"
+    },
+    {
+      "name": "E-commerce in Next.js Typescript using Stripe",
+      "link": "https://github.com/dazzlerabhi30800/ecommerce-store-in-ts-next.js"
+    },
+    {
+      "name": "Tic Tack Toe in React",
+      "link": "https://github.com/dazzlerabhi30800/tic-toe-game-react"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "FreeCodeCamp Javascript Data Structures & Algorithms",
+      "link": "https://www.freecodecamp.org/certification/dazzlerabhi30800/javascript-algorithms-and-data-structures"
+    }
+  ]
 }
