@@ -55,6 +55,10 @@
         {
             "name": "Cutshort Job Hiring",
             "link": "https://cutshort.io/profile/candidate-settings/profile"
+        },
+        {
+            "name": "Wellfound Job Hiring",
+            "link": "https://wellfound.com/profile/edit"
         }
     ],
     "githubrepos": [
