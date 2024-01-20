@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playpen_Sans } from "next/font/google";
 import "./globals.css";
 import ToggleMode from "@/Components/ToggleMode";
+import Wrapper from "@/Components/Wrapper";
 
 const playpen = Playpen_Sans({ subsets: ["latin"] });
 
@@ -19,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={playpen.className}>
-        <ToggleMode />
-        {children}
+        <Wrapper>
+          <ToggleMode />
+          {children}
+        </Wrapper>
       </body>
     </html>
   );
