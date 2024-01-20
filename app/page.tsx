@@ -8,7 +8,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.infoWrapper}>
         <h1>
-          Link Porfolio Website
+          Link Porfolio App 
         </h1>
         <p className={styles.infoPara}>This website contains the links of all useful assets & sources.</p>
       </div>
