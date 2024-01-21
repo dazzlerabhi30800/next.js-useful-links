@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={playpen.className}>
+      <body className={playpen.className} suppressHydrationWarning={true}>
         <Wrapper>
           <ToggleMode />
           {children}
