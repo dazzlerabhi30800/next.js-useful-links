@@ -22,6 +22,13 @@ export function handleShow(link: string, setShow: Dispatch<SetStateAction<boolea
 }
 
 
+export async function fetchLinks() {
+    const data = await fetch("/api/links/");
+    const newData = await data.json();
+    return newData;
+}
+
+
 
 export function fetchData(slug: string) {
     const convertedSlug = slug.replace(/[-_]/, "");
