@@ -6,9 +6,9 @@ import Link from "next/link";
 import Alert from "./Alert";
 import {
   convertToCamelCase,
-  fetchData,
   fetchLinks,
   handleShow,
+  postData,
 } from "@/data/Funcs";
 import { linkInterface } from "@/type";
 
@@ -23,6 +23,14 @@ export default function LinkComp({
     const convertedSlug = slug.replace(/[-_]/, "");
     fetchLinks().then((data) => setLinkData(data[convertedSlug]));
   }, []);
+
+  const handlePost = async () => {
+    const convertedSlug = slug.replace(/[-_]/, "");
+    const data = await postData(convertedSlug);
+    if (!data) return;
+    console.log(data);
+  };
+
   if (!slug || linkData.length === 0) return false;
 
   return (
@@ -49,7 +57,7 @@ export default function LinkComp({
         })}
       </div>
       <Alert show={show} />
-      {/* <button onClick={handleData}>Click Me!</button> */}
+      <button onClick={handlePost}>Add Button</button>
     </main>
   );
 }
