@@ -1,98 +1,92 @@
 :root {
-    --main-background: linear-gradient(to bottom, #dfe1e1, #dadadc);
-    --dark-gray: rgb(58, 59, 59);
-    --heading-gradient-background: var(--dark-gray);
-    --font-color: var(--dark-gray);
-    --link-comp-color: var(--dark-gray);
-    --link-comp-background: transparent;
-    --gradient-line: linear-gradient(to left, var(--dark-gray), var(--dark-gray));
-    --link-page-comp-outline: linear-gradient(to left, var(--dark-gray), var(--dark-gray));
-    --sub-link-background: linear-gradient(to right, #e0e1e3, #e3e2e2);
-    --clipboard-button-color: var(--dark-gray);
-    --alert-container-background: transparent;
-    --alert-container-border-color: var(--dark-gray);
+  --main-background: linear-gradient(to bottom, #dfe1e1, #dadadc);
+  --dark-gray: rgb(58, 59, 59);
+  --heading-gradient-background: var(--dark-gray);
+  --font-color: var(--dark-gray);
+  --link-comp-color: var(--dark-gray);
+  --link-comp-background: transparent;
+  --gradient-line: linear-gradient(to left, var(--dark-gray), var(--dark-gray));
+  --link-page-comp-outline: linear-gradient(
+    to left,
+    var(--dark-gray),
+    var(--dark-gray)
+  );
+  --sub-link-background: linear-gradient(to right, #e0e1e3, #e3e2e2);
+  --clipboard-button-color: var(--dark-gray);
+  --alert-container-background: transparent;
+  --alert-container-border-color: var(--dark-gray);
 
+  /* Toggle button */
+  --toggle-button-background: #d9dadb;
+  --toggle-border: var(--dark-gray);
 
+  /* Sub Card Box Shadow Color */
+  --sub-link-box-shadow: rgba(39, 39, 39, 0.501);
 
-    /* Toggle button */
-    --toggle-button-background: #d9dadb;
-    --toggle-border: var(--dark-gray);
-
-
-
-    /* Sub Card Box Shadow Color */
-    --sub-link-box-shadow: rgba(39, 39, 39, 0.501);
-
-
-    --link-hover-color: #000;
-    --add-btn-border-color: var(--dark-gray);
-
-
+  --link-hover-color: #000;
+  --add-btn-border-color: var(--dark-gray);
 }
 
-
 .theme-dark {
+  --main-background: linear-gradient(to bottom, #090f12, #131823);
+  --heading-gradient-background: linear-gradient(to left, #68f1f1, #f25ac2);
+  --font-color: #fff;
+  --link-comp-color: #ffffff;
+  --link-comp-background: transparent;
+  --gradient-line: linear-gradient(to left, #5ab7f5, rgb(255, 0, 115));
+  --link-page-comp-outline: linear-gradient(
+    to left,
+    rgb(35, 229, 239),
+    #ee1b8f
+  );
+  --sub-link-background: linear-gradient(to right, #152127, #211118);
+  --clipboard-button-color: rgb(174, 237, 247);
+  --alert-container-background: #182730;
+  --alert-container-border-color: rgb(163, 236, 246);
 
-    --main-background: linear-gradient(to bottom, #090f12, #131823);
-    --heading-gradient-background: linear-gradient(to left, #68f1f1, #f25ac2);
-    --font-color: #fff;
-    --link-comp-color: #ffffff;
-    --link-comp-background: transparent;
-    --gradient-line: linear-gradient(to left, #5ab7f5, rgb(255, 0, 115));
-    --link-page-comp-outline: linear-gradient(to left, rgb(35, 229, 239), #ee1b8f);
-    --sub-link-background: linear-gradient(to right, #152127, #211118);
-    --clipboard-button-color: rgb(174, 237, 247);
-    --alert-container-background: #182730;
-    --alert-container-border-color: rgb(163, 236, 246);
+  /* Toggle button */
+  --toggle-button-background: #294557;
+  --toggle-border: #f5cde8;
 
+  /* Sub Card Box Shadow Color */
+  --sub-link-box-shadow: transparent;
 
-    /* Toggle button */
-    --toggle-button-background: #294557;
-    --toggle-border: #f5cde8;
-
-
-    /* Sub Card Box Shadow Color */
-    --sub-link-box-shadow: transparent;
-
-
-    --link-hover-color: #cec9c9;
-    --add-btn-border-color: rgb(35,299,239);
+  --link-hover-color: #cec9c9;
+  --add-btn-border-color: rgb(35, 299, 239);
 }
 
 .h1 {
-    animation: none;
+  animation: none;
 }
 
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: var(--main-background);
-    overflow-x: hidden;
-    position: relative;
-    min-height: 100vh;
-    color: #fff;
-    text-align: center;
-    color: var(--font-color);
+  background: var(--main-background);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  color: #fff;
+  text-align: center;
+  color: var(--font-color);
 }
 
 .notoverflow {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  align-items: center;
+  min-height: 100vh;
 }
-
 
 h1,
 h2,
@@ -100,225 +94,209 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: clamp(1.2rem, 2vw + 2px, 1.6rem);
-    width: fit-content;
-
+  font-size: clamp(1.2rem, 2vw + 2px, 1.6rem);
+  width: fit-content;
 }
-
 
 h1 {
-    background: var(--heading-gradient-background);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: headingAnim 15s linear infinite;
-    font-size: clamp(1.7rem, 2.3vw, 2.6rem);
+  background: var(--heading-gradient-background);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: headingAnim 15s linear infinite;
+  font-size: clamp(1.7rem, 2.3vw, 2.6rem);
 }
-
 
 /* Links Page Styling */
 .links-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    width: 100%;
-    margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+  margin: 1rem 0;
 }
 
-
 .link-outline {
-    padding: 4px;
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    flex-basis: min(100%, 300px);
-    border-radius: 10px;
-    background: var(--link-page-comp-outline);
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  flex-basis: min(100%, 300px);
+  border-radius: 10px;
+  background: var(--link-page-comp-outline);
 }
 
 .sub-link {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 1.1rem;
-    text-align: left;
-    background: var(--sub-link-background);
-    border-radius: 8px;
-    padding: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1.1rem;
+  text-align: left;
+  background: var(--sub-link-background);
+  border-radius: 8px;
+  padding: 1rem;
 }
 
 .sub-link a {
-    font-size: clamp(0.9rem, 1.3vw + 2px, 1rem);
+  font-size: clamp(0.9rem, 1.3vw + 2px, 1rem);
 }
 
-
 button {
-    outline: none;
-    width: fit-content;
-    border: none;
+  outline: none;
+  width: fit-content;
+  border: none;
 }
 
 .clipboard-btn {
-    border-radius: 5px;
-    padding: 5px 8px;
-    background: transparent;
-    box-shadow: 3px 3px 0px 1px var(--clipboard-button-color);
-    color: var(--clipboard-button-color) !important;
-    border: 2px solid var(--clipboard-button-color)
+  border-radius: 5px;
+  padding: 5px 8px;
+  background: transparent;
+  box-shadow: 3px 3px 0px 1px var(--clipboard-button-color);
+  color: var(--clipboard-button-color) !important;
+  border: 2px solid var(--clipboard-button-color);
 }
 
 .clipboard-symbol {
-    --icon_dimension: var(--icon-dimension, 22px);
-    width: var(--icon_dimension);
-    height: var(--icon_dimension);
+  --icon_dimension: var(--icon-dimension, 22px);
+  width: var(--icon_dimension);
+  height: var(--icon_dimension);
 }
 
 a {
-    color: var(--font-color);
-
+  color: var(--font-color);
 }
-
 
 @keyframes headingAnim {
-    0% {
-        background-position: 150vh;
-    }
+  0% {
+    background-position: 150vh;
+  }
 
-    100% {
-        background-position: 0vh;
-    }
+  100% {
+    background-position: 0vh;
+  }
 }
-
 
 /* Mode Toggler Button */
 .mode-toggler {
-    position: fixed;
-    background: var(--toggle-button-background);
-    color: var(--font-color);
-    padding: 0.5rem 0.6rem;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 5px;
-    border: 2px solid var(--toggle-border);
+  position: fixed;
+  background: var(--toggle-button-background);
+  color: var(--font-color);
+  padding: 0.5rem 0.6rem;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--toggle-border);
 }
-
 
 /* Add Button */
 .add--btn {
-    /* border: none; */
-    outline: none;
-    width: 20%;
-    height: inherit;
-    background: none;
-    color: var(--font-color);
-    border-radius: 10px;
-    border: 3px solid var(--add-btn-border-color);
+  /* border: none; */
+  outline: none;
+  width: 20%;
+  height: inherit;
+  background: none;
+  color: var(--font-color);
+  border-radius: 10px;
+  border: 3px solid var(--add-btn-border-color);
 }
-
-
 
 /* Add Form Styling */
 .form--wrapper {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
 }
 form {
-    border-radius: 10px;
-    position: relative;
-    background: var(--main-background);
-    width: clamp(300px, 90%, 450px);
-    box-shadow: 0 0 10px 3px rgba(0,0,0,0.2);
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    gap: 3rem;
+  border-radius: 10px;
+  position: relative;
+  background: var(--main-background);
+  width: clamp(300px, 90%, 450px);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 3rem;
 }
 .input--container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 form > * {
-    font-size: clamp(1.1rem, 1.3vw + 2px, 1.4rem);
+  font-size: clamp(1.1rem, 1.3vw + 2px, 1.4rem);
 }
 .input--container input {
-    background: none;
-    color: var(--font-color);
-    font-size: clamp(1.1rem, 1.3vw + 2px, 1.4rem);
-    border: 2px solid var(--add-btn-border-color);
-    border-radius: 5px;
-    padding: 15px;
+  background: none;
+  color: var(--font-color);
+  font-size: clamp(1.1rem, 1.3vw + 2px, 1.4rem);
+  border: 2px solid var(--add-btn-border-color);
+  border-radius: 5px;
+  padding: 15px;
 }
 .input--container input::placeholder {
-    color: var(--font-color);
+  color: var(--font-color);
 }
 button[type="submit"] {
-    background: var(--gradient-line);
-    color: var(--font-color);
-    padding: 10px 20px;
-    border-radius: 5px;
+  background: var(--gradient-line);
+  color: var(--font-color);
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
-.close--btn{
-    position: absolute;
-    background: none;
-    right: 7px;
-    top: 7px;
-    color: var(--font-color);
-    width: 28px;
-    height: 28px;
+.close--btn {
+  position: absolute;
+  background: none;
+  right: 7px;
+  top: 7px;
+  color: var(--font-color);
+  width: 28px;
+  height: 28px;
 }
 
+@media (hover: hover) {
+  button {
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
 
+  .clipboard-btn:hover {
+    --clipboard-button-color: #151515;
+  }
 
-@media (hover:hover) {
-    button {
-        cursor: pointer;
-        transition: 0.3s linear;
-    }
+  .clipboard-btn:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+  }
 
-    .clipboard-btn:hover {
-        --clipboard-button-color: #151515;
-    }
+  .theme-dark .clipboard-btn:hover {
+    --clipboard-button-color: #f1a04f;
+  }
+  .add--btn:hover {
+    color: var(--add-btn-border-color);
+  }
+  button[type="submit"]:hover {
+    filter: brightness(1.2) contrast(0.9);
+  }
+  .close--btn:hover {
+    --font-color: #f347e8;
+  }
 
-    .clipboard-btn:active {
-        transform: translate(5px, 5px);
-        box-shadow: none;
-    }
-
-
-    .theme-dark .clipboard-btn:hover {
-        --clipboard-button-color: #f1a04f;
-    }
-    .add--btn:hover {
-        color: var(--add-btn-border-color);
-    }
-    button[type="submit"]:hover {
-        filter: brightness(1.2) contrast(0.9);
-    }
-    .close--btn:hover {
-        --font-color: #f347e8;
-    }
-
-
-    a:hover {
-        color: var(--link-hover-color);
-    }
+  a:hover {
+    color: var(--link-hover-color);
+  }
 }
-
-
 
 @media Screen and (min-width: 750px) {
-    .links-container {
-        gap: 2.5rem;
-        margin: 2rem auto;
-        width: 75%;
-    }
+  .links-container {
+    gap: 2.5rem;
+    margin: 2rem auto;
+    width: 75%;
+  }
 }
+

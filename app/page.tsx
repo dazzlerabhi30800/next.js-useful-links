@@ -1,12 +1,9 @@
-"use client";
 import Link from "next/link";
 import styles from "./page.module.css";
 import data from "@/data/links.json";
 import { linkInterface } from "@/type";
-import { useLinkContext } from "@/context/Appcontext";
 
 export default function Home() {
-  const { show } = useLinkContext();
   return (
     <main className={styles.main}>
       <div className={styles.infoWrapper}>
