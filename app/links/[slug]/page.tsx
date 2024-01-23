@@ -11,6 +11,9 @@ import {
   postData,
 } from "@/data/Funcs";
 import { linkInterface } from "@/type";
+import AddButton from "@/Components/AddButton";
+import AddForm from "@/Components/AddForm";
+import { linkContext, useLinkContext } from "@/context/Appcontext";
 
 export default function LinkComp({
   params: { slug },
@@ -24,12 +27,15 @@ export default function LinkComp({
     fetchLinks().then((data) => setLinkData(data[convertedSlug]));
   }, []);
 
-  const handlePost = async () => {
-    const convertedSlug = slug.replace(/[-_]/, "");
-    const data = await postData(convertedSlug);
-    if (!data) return;
-    console.log(data);
-  };
+  // Context Hooks
+  const { addLink } = useLinkContext();
+
+  // const handlePost = async () => {
+  //   const convertedSlug = slug.replace(/[-_]/, "");
+  //   const data = await postData(convertedSlug);
+  //   if (!data) return;
+  //   console.log(data);
+  // };
 
   if (!slug || linkData.length === 0) return false;
 
@@ -55,9 +61,10 @@ export default function LinkComp({
             </div>
           );
         })}
+        <AddButton />
       </div>
       <Alert show={show} />
-      <button onClick={handlePost}>Add Button</button>
+      {addLink && <AddForm slug={slug} setLinkData={setLinkData} />}
     </main>
   );
 }

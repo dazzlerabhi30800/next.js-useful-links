@@ -1,11 +1,11 @@
-import { promises as fsr } from "fs";
+// import { promises as fsr } from "fs";
 import { NextApiRequest, NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 
 const filePath = process.cwd() + "/data/links.json";
 export async function GET() {
-  const file = await fsr.readFile(filePath, "utf-8");
+  const file = fs.readFileSync(filePath, "utf-8");
   const data = JSON.parse(file);
   return NextResponse.json(data);
 }
@@ -18,7 +18,7 @@ export async function GET() {
 export async function POST(req: Request) {
   const { key, name, link } = await req.json();
 
-  const file = await fsr.readFile(filePath, "utf-8");
+  const file = fs.readFileSync(filePath, "utf-8");
   const data = JSON.parse(file);
   const newData = {
     name,

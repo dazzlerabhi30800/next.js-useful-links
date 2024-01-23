@@ -25,6 +25,7 @@
 
 
     --link-hover-color: #000;
+    --add-btn-border-color: var(--dark-gray);
 
 
 }
@@ -55,6 +56,7 @@
 
 
     --link-hover-color: #cec9c9;
+    --add-btn-border-color: rgb(35,299,239);
 }
 
 .h1 {
@@ -78,6 +80,9 @@ body {
     color: var(--font-color);
 }
 
+.notoverflow {
+    overflow: hidden;
+}
 
 main {
     display: flex;
@@ -198,6 +203,81 @@ a {
 }
 
 
+/* Add Button */
+.add--btn {
+    /* border: none; */
+    outline: none;
+    width: 20%;
+    height: inherit;
+    background: none;
+    color: var(--font-color);
+    border-radius: 10px;
+    border: 3px solid var(--add-btn-border-color);
+}
+
+
+
+/* Add Form Styling */
+.form--wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+form {
+    border-radius: 10px;
+    position: relative;
+    background: var(--main-background);
+    width: clamp(300px, 90%, 450px);
+    box-shadow: 0 0 10px 3px rgba(0,0,0,0.2);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 3rem;
+}
+.input--container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+form > * {
+    font-size: clamp(1.1rem, 1.3vw + 2px, 1.4rem);
+}
+.input--container input {
+    background: none;
+    color: var(--font-color);
+    font-size: clamp(1.1rem, 1.3vw + 2px, 1.4rem);
+    border: 2px solid var(--add-btn-border-color);
+    border-radius: 5px;
+    padding: 15px;
+}
+.input--container input::placeholder {
+    color: var(--font-color);
+}
+button[type="submit"] {
+    background: var(--gradient-line);
+    color: var(--font-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.close--btn{
+    position: absolute;
+    background: none;
+    right: 7px;
+    top: 7px;
+    color: var(--font-color);
+    width: 28px;
+    height: 28px;
+}
+
+
+
 @media (hover:hover) {
     button {
         cursor: pointer;
@@ -217,12 +297,22 @@ a {
     .theme-dark .clipboard-btn:hover {
         --clipboard-button-color: #f1a04f;
     }
+    .add--btn:hover {
+        color: var(--add-btn-border-color);
+    }
+    button[type="submit"]:hover {
+        filter: brightness(1.2) contrast(0.9);
+    }
+    .close--btn:hover {
+        --font-color: #f347e8;
+    }
 
 
     a:hover {
         color: var(--link-hover-color);
     }
 }
+
 
 
 @media Screen and (min-width: 750px) {

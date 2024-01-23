@@ -35,11 +35,11 @@ export function fetchData(slug: string) {
   return links[convertedSlug];
 }
 
-export async function postData(key: string) {
+export async function postData(key: string, name: string, link: string) {
   const bodyData = {
-    key: key,
-    name: "postLinks",
-    link: "https://google.com",
+    key,
+    name,
+    link,
   };
   const post = await fetch("/api/links/", {
     method: "POST",
