@@ -192,10 +192,11 @@ a {
 .add--btn {
   /* border: none; */
   outline: none;
-  width: 20%;
-  height: inherit;
+  width: 10%;
+  height: 100px;
   background: none;
   color: var(--font-color);
+  align-self: center;
   border-radius: 10px;
   border: 3px solid var(--add-btn-border-color);
 }

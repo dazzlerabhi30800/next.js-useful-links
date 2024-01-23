@@ -8,12 +8,11 @@ import {
   convertToCamelCase,
   fetchLinks,
   handleShow,
-  postData,
 } from "@/data/Funcs";
 import { linkInterface } from "@/type";
 import AddButton from "@/Components/AddButton";
 import AddForm from "@/Components/AddForm";
-import { linkContext, useLinkContext } from "@/context/Appcontext";
+import {  useLinkContext } from "@/context/Appcontext";
 
 export default function LinkComp({
   params: { slug },
@@ -29,13 +28,6 @@ export default function LinkComp({
 
   // Context Hooks
   const { addLink } = useLinkContext();
-
-  // const handlePost = async () => {
-  //   const convertedSlug = slug.replace(/[-_]/, "");
-  //   const data = await postData(convertedSlug);
-  //   if (!data) return;
-  //   console.log(data);
-  // };
 
   if (!slug || linkData.length === 0) return false;
 
