@@ -2,6 +2,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
+import { linkInterface } from "@/type";
 
 const filePath = process.cwd() + "/data/links.json";
 export async function GET() {
@@ -26,5 +27,18 @@ export async function POST(req: Request) {
   };
   data[key].push(newData);
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  return NextResponse.json(data);
+}
+
+export async function DELETE(req: Request) {
+  const { key, title } = await req.json();
+  const file = fs.readFileSync(filePath, "utf-8");
+  const data = JSON.parse(file);
+  const index = data[key].findIndex(
+    (link: linkInterface) => link.name === title
+  );
+  data[key].splice(index, 1);
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+
   return NextResponse.json(data);
 }

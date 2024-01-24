@@ -137,6 +137,13 @@ h1 {
   padding: 1rem;
 }
 
+.remove--btn {
+  color: var(--font-color);
+  background: none;
+  margin: 1px 0 5px;
+  align-self: flex-end;
+}
+
 .sub-link a {
   font-size: clamp(0.9rem, 1.3vw + 2px, 1rem);
 }
@@ -284,7 +291,7 @@ button[type="submit"] {
   button[type="submit"]:hover {
     filter: brightness(1.2) contrast(0.9);
   }
-  .close--btn:hover {
+  .close--btn:hover,.remove--btn:hover {
     --font-color: #f347e8;
   }
 

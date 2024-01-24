@@ -1,18 +1,22 @@
 "use client";
 import { useEffect } from "react";
-import { ClipboardDocumentListIcon } from "@heroicons/react/20/solid";
+import {
+  ClipboardDocumentListIcon,
+  XMarkIcon,
+} from "@heroicons/react/20/solid";
 import { useState } from "react";
 import Link from "next/link";
 import Alert from "./Alert";
 import {
   convertToCamelCase,
+  deleteData,
   fetchLinks,
   handleShow,
 } from "@/data/Funcs";
 import { linkInterface } from "@/type";
 import AddButton from "@/Components/AddButton";
 import AddForm from "@/Components/AddForm";
-import {  useLinkContext } from "@/context/Appcontext";
+import { useLinkContext } from "@/context/Appcontext";
 
 export default function LinkComp({
   params: { slug },
@@ -39,6 +43,16 @@ export default function LinkComp({
           return (
             <div className="link-outline" key={index}>
               <div className="sub-link">
+                <button
+                  className="remove--btn"
+                  onClick={async () => {
+                    const convertedSlug = slug.replace(/[-_]/, "");
+                    const data = await deleteData(convertedSlug, item.name);
+                    setLinkData(data[convertedSlug]);
+                  }}
+                >
+                  <XMarkIcon width={30} height={30} />
+                </button>
                 <h2>{item.name}</h2>
                 <Link target="_blank" href={item.link}>
                   {item.link}

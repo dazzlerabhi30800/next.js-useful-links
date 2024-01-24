@@ -52,3 +52,21 @@ export async function postData(key: string, name: string, link: string) {
   const data = await post.json();
   return data;
 }
+
+export async function deleteData(key: string, title: string) {
+  if (!key || !title) return;
+  console.log("hello");
+  const deletedLink = await fetch("/api/links/", {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+      // "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      key,
+      title,
+    }),
+  });
+  const data = await deletedLink.json();
+  return data;
+}
