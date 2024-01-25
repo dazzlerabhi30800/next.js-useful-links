@@ -1,7 +1,7 @@
 import { useLinkContext } from "@/context/Appcontext";
 import { postData } from "@/data/Funcs";
-import { formProps, linkInterface } from "@/type";
-import { FormEvent, SetStateAction } from "react";
+import { formProps } from "@/type";
+import { FormEvent } from "react";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 export default function AddForm({ slug, setLinkData }: formProps) {
   const {

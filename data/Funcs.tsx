@@ -1,6 +1,7 @@
 import data from "@/data/links.json";
 import { linkInterface, linkTree } from "@/type";
 import { Dispatch, SetStateAction } from "react";
+import axios from "axios";
 
 export function convertToCamelCase(str: string) {
   const splitStr = str.split(/[-_]/);
@@ -11,7 +12,7 @@ export function convertToCamelCase(str: string) {
 
 export function handleShow(
   link: string,
-  setShow: Dispatch<SetStateAction<boolean>>
+  setShow: Dispatch<SetStateAction<boolean>>,
 ) {
   let showTimeout: any;
   setShow((prevState) => (prevState = false));
@@ -45,10 +46,10 @@ export async function postData(key: string, name: string, link: string) {
     method: "POST",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
-      // "Content-type": "application/json",
     },
     body: JSON.stringify(bodyData),
   });
+  if (!post) return;
   const data = await post.json();
   return data;
 }
@@ -74,7 +75,7 @@ export async function updateData(
   key: string,
   name: string,
   link: string,
-  index: string
+  index: string,
 ) {
   if (!key || !name || !link || !index) return;
   const updatedData = await fetch("/api/links/", {
