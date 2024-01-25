@@ -11,20 +11,20 @@ export async function GET() {
   return NextResponse.json(data);
 }
 
-export async function POST(req: Request) {
-  const { key, name, link } = await req.json();
+// export async function POST(req: Request) {
+//   const { key, name, link } = await req.json();
 
-  // const file = fs.readFileSync(filePath, "utf-8");
-  // const data = JSON.parse(file);
-  // const newData = {
-  //   name,
-  //   link,
-  // };
+//   // const file = fs.readFileSync(filePath, "utf-8");
+//   // const data = JSON.parse(file);
+//   // const newData = {
+//   //   name,
+//   //   link,
+//   // };
 
-  // data[key].push(newData);
-  // fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-  return NextResponse.json({ name, link });
-}
+//   // data[key].push(newData);
+//   // fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+//   return NextResponse.json({ name, link });
+// }
 
 export async function PUT(req: Request) {
   const { key, name, link, index } = await req.json();

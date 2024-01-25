@@ -42,7 +42,7 @@ export async function postData(key: string, name: string, link: string) {
     name,
     link,
   };
-  const post = await fetch("/api/links/", {
+  const post = await fetch("/api/links/post", {
     method: "POST",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
