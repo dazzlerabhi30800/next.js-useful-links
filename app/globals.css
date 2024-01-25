@@ -13,6 +13,7 @@
   );
   --sub-link-background: linear-gradient(to right, #e0e1e3, #e3e2e2);
   --clipboard-button-color: var(--dark-gray);
+  --update-button-color: var(--dark-gray);
   --alert-container-background: transparent;
   --alert-container-border-color: var(--dark-gray);
 
@@ -41,6 +42,7 @@
   );
   --sub-link-background: linear-gradient(to right, #152127, #211118);
   --clipboard-button-color: rgb(174, 237, 247);
+  --update-button-color: rgb(245, 54, 140);
   --alert-container-background: #182730;
   --alert-container-border-color: rgb(163, 236, 246);
 
@@ -134,7 +136,7 @@ h1 {
   text-align: left;
   background: var(--sub-link-background);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 1rem 1rem 1.5rem;
 }
 
 .remove--btn {
@@ -154,17 +156,33 @@ button {
   border: none;
 }
 
-.clipboard-btn {
+.button--container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.button--container button {
   border-radius: 5px;
   padding: 5px 8px;
   background: transparent;
+  --icon_dimension: var(--icon-dimension, 22px);
+}
+/* Update Btn */
+.update--btn {
+  border: 2px solid var(--update-button-color);
+  color: var(--update-button-color);
+  box-shadow: 3px 3px 0px 1px var(--update-button-color);
+}
+
+.clipboard-btn {
   box-shadow: 3px 3px 0px 1px var(--clipboard-button-color);
   color: var(--clipboard-button-color) !important;
   border: 2px solid var(--clipboard-button-color);
 }
 
 .clipboard-symbol {
-  --icon_dimension: var(--icon-dimension, 22px);
   width: var(--icon_dimension);
   height: var(--icon_dimension);
 }
@@ -267,6 +285,7 @@ button[type="submit"] {
   height: 28px;
 }
 
+
 @media (hover: hover) {
   button {
     cursor: pointer;
@@ -277,7 +296,7 @@ button[type="submit"] {
     --clipboard-button-color: #151515;
   }
 
-  .clipboard-btn:active {
+  .update--btn:active,.clipboard-btn:active {
     transform: translate(5px, 5px);
     box-shadow: none;
   }
@@ -291,7 +310,8 @@ button[type="submit"] {
   button[type="submit"]:hover {
     filter: brightness(1.2) contrast(0.9);
   }
-  .close--btn:hover,.remove--btn:hover {
+  .close--btn:hover,
+  .remove--btn:hover {
     --font-color: #f347e8;
   }
 
@@ -307,4 +327,3 @@ button[type="submit"] {
     width: 75%;
   }
 }
-

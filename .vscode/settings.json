@@ -1,3 +1,5 @@
 {
-    "editor.cursorBlinking": "smooth"
+    "editor.cursorBlinking": "smooth",
+    "workbench.list.smoothScrolling": false,
+    "editor.smoothScrolling": false
 }

@@ -1,43 +1,46 @@
 import { useLinkContext } from "@/context/Appcontext";
-import { postData } from "@/data/Funcs";
-import { formProps, linkInterface } from "@/type";
+// import { postData } from "@/data/Funcs";
+// import { linkInterface } from "@/type";
 import { FormEvent, SetStateAction } from "react";
 import { XMarkIcon } from "@heroicons/react/20/solid";
-export default function AddForm({ slug, setLinkData }: formProps) {
-  const {
-    setLinkString,
-    setTitleString,
-    titleString,
-    linkString,
-    closeAddModal,
-  } = useLinkContext();
+import { formProps } from "@/type";
+import { updateData } from "@/data/Funcs";
+export default function UpdateForm({ slug, setLinkData }: formProps) {
+  const { updateLink, setUpdateLink, closeUpdateModal } = useLinkContext();
+  const { name, link, index } = updateLink;
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const convertedSlug = slug.replace(/[-_]/, "");
-    if (titleString.length < 2 || linkString.length < 2) return;
-    const data = await postData(convertedSlug, titleString, linkString);
+    if (name.length < 2 || link.length < 2) return;
+    const data = await updateData(convertedSlug, name, link, index);
     if (!data) return;
     setLinkData(data[convertedSlug]);
-    closeAddModal();
+    closeUpdateModal();
   };
   return (
     <div className="form--wrapper">
       <form onSubmit={handleSubmit}>
         <div className="input--container">
-          <label htmlFor="title">Title</label>
+          <label htmlFor="updateTitle">Title</label>
           <input
-            onChange={(e) => setTitleString(e.target.value)}
+            onChange={(e) =>
+              setUpdateLink({ ...updateLink, name: e.target.value })
+            }
+            value={name}
             type="text"
-            id="title"
+            id="updateTitle"
             placeholder="enter the title"
           />
         </div>
         <div className="input--container">
-          <label htmlFor="link">Link URL</label>
+          <label htmlFor="updateLink">Link URL</label>
           <input
-            onChange={(e) => setLinkString(e.target.value)}
+            onChange={(e) =>
+              setUpdateLink({ ...updateLink, link: e.target.value })
+            }
+            value={link}
             type="text"
-            id="link"
+            id="updateLink"
             placeholder="enter the link"
           />
         </div>
@@ -46,7 +49,7 @@ export default function AddForm({ slug, setLinkData }: formProps) {
           className="close--btn"
           onClick={(e) => {
             e.preventDefault();
-            closeAddModal();
+            closeUpdateModal();
           }}
         >
           <XMarkIcon />

@@ -70,3 +70,21 @@ export async function deleteData(key: string, title: string) {
   const data = await deletedLink.json();
   return data;
 }
+
+export async function updateData(
+  key: string,
+  name: string,
+  link: string,
+  index: string
+) {
+  if (!key || !name || !link || !index) return;
+  const updatedData = await fetch("/api/links/", {
+    method: "PUT",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    body: JSON.stringify({ key, name, link, index }),
+  });
+  const data = await updatedData.json();
+  return data;
+}

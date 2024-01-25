@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import {
   ClipboardDocumentListIcon,
   XMarkIcon,
+  PencilSquareIcon,
 } from "@heroicons/react/20/solid";
 import { useState } from "react";
 import Link from "next/link";
@@ -17,6 +18,7 @@ import { linkInterface } from "@/type";
 import AddButton from "@/Components/AddButton";
 import AddForm from "@/Components/AddForm";
 import { useLinkContext } from "@/context/Appcontext";
+import UpdateForm from "@/Components/UpdateForm";
 
 export default function LinkComp({
   params: { slug },
@@ -31,7 +33,7 @@ export default function LinkComp({
   }, []);
 
   // Context Hooks
-  const { addLink } = useLinkContext();
+  const { addLink, handleUpdateLink, update, updateLink } = useLinkContext();
 
   if (!slug || linkData.length === 0) return false;
 
@@ -57,12 +59,27 @@ export default function LinkComp({
                 <Link target="_blank" href={item.link}>
                   {item.link}
                 </Link>
-                <button
-                  className="clipboard-btn"
-                  onClick={() => handleShow(item.link, setShow)}
-                >
-                  <ClipboardDocumentListIcon className="clipboard-symbol" />
-                </button>
+                <div className="button--container">
+                  <button
+                    className="clipboard-btn"
+                    onClick={() => handleShow(item.link, setShow)}
+                  >
+                    <ClipboardDocumentListIcon className="clipboard-symbol" />
+                  </button>
+                  <button
+                    className="update--btn"
+                    onClick={() =>
+                      handleUpdateLink(item.name, item.link, index.toString())
+                    }
+                  >
+                    <PencilSquareIcon
+                      style={{
+                        width: "var(--icon_dimension)",
+                        height: "var(--icon_dimension)",
+                      }}
+                    />
+                  </button>
+                </div>
               </div>
             </div>
           );
@@ -71,6 +88,7 @@ export default function LinkComp({
       </div>
       <Alert show={show} />
       {addLink && <AddForm slug={slug} setLinkData={setLinkData} />}
+      {update && <UpdateForm slug={slug} setLinkData={setLinkData} />}
     </main>
   );
 }
