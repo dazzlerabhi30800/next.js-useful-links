@@ -16,9 +16,14 @@ export async function POST(req: Request) {
 
   const file = fs.readFileSync(filePath, "utf-8");
   const data = JSON.parse(file);
+  // const newData = {
+  //   name,
+  //   link,
+  // };
+
   const newData = {
-    name,
-    link,
+    name: "Abhishek",
+    link: "https://www.google.com",
   };
   data[key].push(newData);
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
