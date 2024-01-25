@@ -20,28 +20,17 @@ export async function POST(req: Request) {
     name,
     link,
   };
-  try {
-    data[key].push(newData);
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-    return NextResponse.json(data);
-  }
-  catch(error: any) {
-    return NextResponse.json(error);
-  }
+  data[key].push(newData);
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  return NextResponse.json(data);
 }
-
 
 export async function PUT(req: Request) {
   const { key, name, link, index } = await req.json();
   const file = fs.readFileSync(filePath, "utf-8");
   const data = JSON.parse(file);
-  try {
-    data[key][index]["name"] = name;
-    data[key][index]["link"] = link;
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-    return NextResponse.json(data);
-  }
-  catch(error: any) {
-    return NextResponse.json(error);
-  }
+  data[key][index]["name"] = name;
+  data[key][index]["link"] = link;
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  return NextResponse.json(data);
 }

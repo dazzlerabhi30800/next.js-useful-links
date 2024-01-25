@@ -15,10 +15,15 @@ export default function AddForm({ slug, setLinkData }: formProps) {
     e.preventDefault();
     const convertedSlug = slug.replace(/[-_]/, "");
     if (titleString.length < 2 || linkString.length < 2) return;
-    const data = await postData(convertedSlug, titleString, linkString);
-    if (!data) return;
-    setLinkData(data[convertedSlug]);
-    closeAddModal();
+    try {
+      const data = await postData(convertedSlug, titleString, linkString);
+      if (!data) return;
+      setLinkData(data[convertedSlug]);
+      closeAddModal();
+    }
+    catch(error: any) {
+      console.log(error);
+    }
   };
   return (
     <div className="form--wrapper">
