@@ -21,7 +21,7 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
 
     data[key].push(newData);
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-    // fs.writeFileSync("/tmp/links.json", JSON.stringify(data, null, 2));
+    fs.writeFileSync("tmp/links.json", JSON.stringify(data, null, 2));
 
     // return NextResponse.json(data);
     return new NextResponse(data, { status: 200 });
