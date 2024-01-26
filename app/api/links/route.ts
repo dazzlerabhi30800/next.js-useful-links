@@ -2,10 +2,16 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
+import path from "path";
 import { linkInterface } from "@/type";
 
-const filePath = process.cwd() + "/var/task/tmp/links.json";
+let filePath: string;
 export async function GET() {
+  if (process.env.DEV && process.env.DEV === "yes") {
+    filePath = path.join("/tmp/", "links.json");
+  } else {
+    filePath = process.cwd() + "/links.json";
+  }
   const file = fs.readFileSync(filePath, "utf-8");
   const data = JSON.parse(file);
   return NextResponse.json(data);

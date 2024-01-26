@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./page.module.css";
-import data from "@/var/task/tmp/links.json";
+import data from "@/links.json";
 import { linkInterface } from "@/type";
 
 export default function Home() {
