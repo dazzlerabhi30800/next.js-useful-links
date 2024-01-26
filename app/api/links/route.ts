@@ -5,7 +5,8 @@ import fs from "fs";
 import path from "path";
 import { linkInterface } from "@/type";
 
-let filePath = path.join(process.cwd(), "tmp", "links.json");
+// let filePath = path.join(process.cwd(), "tmp", "links.json");
+let filePath = path.join("tmp/", "links.json");
 // let filePath = path.join("tmp", "links.json");
 
 export async function GET() {
