@@ -21,6 +21,11 @@ export default function AddForm({ slug, setLinkData }: formProps) {
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
+        body: JSON.stringify({
+          key: convertedSlug,
+          name: titleString,
+          link: linkString,
+        }),
       });
       const data = await response.json();
       if (!data) return;
