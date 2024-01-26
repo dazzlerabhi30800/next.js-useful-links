@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import { NextApiResponse } from "next";
-import { join } from "path";
+import path from "path";
 
-const filePath = process.cwd() + "/var/task/tmp/links.json";
-// const filePath = join("/tmp", "links.json");
+let filePath = path.join(process.cwd(), "tmp", "links.json");
+
 // export async function POST(req: Request, res: NextApiResponse) {
 export async function POST(req: NextRequest, res: NextApiResponse) {
   const status = await req.json();
