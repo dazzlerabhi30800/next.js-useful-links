@@ -12,7 +12,7 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
   const { key, name, link } = status;
   if (!fs.existsSync(filePath)) return;
   try {
-    const file = fs.readFileSync(filePath, "utf-8");
+    const file = fs.readFileSync("tmp/links.json", "utf-8");
     const data = JSON.parse(file);
     const newData = {
       name,

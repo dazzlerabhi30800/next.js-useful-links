@@ -10,7 +10,7 @@ let filePath = path.join("tmp/", "links.json");
 // let filePath = path.join("tmp", "links.json");
 
 export async function GET() {
-  const file = fs.readFileSync(filePath, "utf-8");
+  const file = fs.readFileSync("tmp/links.json", "utf-8");
   const data = JSON.parse(file);
   return NextResponse.json(data);
 }
