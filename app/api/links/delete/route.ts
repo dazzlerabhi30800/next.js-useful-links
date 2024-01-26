@@ -1,4 +1,5 @@
-const filePath = process.cwd() + "/data/links.json";
+// const filePath = process.cwd() + "/data/links.json";
+const filePath = process.cwd() + "/tmp/links.json";
 import { linkInterface } from "@/type";
 import fs from "fs";
 import { NextResponse } from "next/server";

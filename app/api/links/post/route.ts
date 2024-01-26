@@ -3,15 +3,16 @@ import fs from "fs";
 import { NextApiResponse } from "next";
 import path from "path";
 
-let filePath = process.cwd() + "/tmp/links.json";
-// let filePath = path.join(process.cwd(), "tmp", "links.json");
+// let filePath = process.cwd() + "/tmp/links.json";
+let filePath = path.join(process.cwd(), "tmp", "links.json");
 // let filePath = "/tmp/links.json";
-// let filePath = path.join("/tmp", "links.json");
+// let filePath = path.join("/tmp", "/links.json");
 
 // export async function POST(req: Request, res: NextApiResponse) {
 export async function POST(req: NextRequest, res: NextApiResponse) {
   const status = await req.json();
   const { key, name, link } = status;
+  if (!fs.existsSync(filePath)) return;
   try {
     const file = fs.readFileSync(filePath, "utf-8");
     const data = JSON.parse(file);
