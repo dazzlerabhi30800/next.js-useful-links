@@ -7,13 +7,17 @@ export async function POST(req: Request) {
   if (!key || !name || !link) return;
 
   const file = fs.readFileSync(filePath, "utf-8");
+  console.log({ key, name, link });
   const data = JSON.parse(file);
   const newData = {
     name,
     link,
   };
+  console.log("fine 1");
 
   data[key].push(newData);
+  console.log("fine 2");
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  console.log("fine 3");
   return NextResponse.json(data);
 }
