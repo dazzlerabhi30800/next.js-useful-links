@@ -1,4 +1,3 @@
-import data from "@/data/links.json";
 import { linkInterface, linkTree } from "@/type";
 import { Dispatch, SetStateAction } from "react";
 import axios from "axios";
@@ -12,7 +11,7 @@ export function convertToCamelCase(str: string) {
 
 export function handleShow(
   link: string,
-  setShow: Dispatch<SetStateAction<boolean>>,
+  setShow: Dispatch<SetStateAction<boolean>>
 ) {
   let showTimeout: any;
   setShow((prevState) => (prevState = false));
@@ -30,11 +29,11 @@ export async function fetchLinks() {
   return newData;
 }
 
-export function fetchData(slug: string) {
-  const convertedSlug = slug.replace(/[-_]/, "");
-  const links: linkTree = data;
-  return links[convertedSlug];
-}
+// export function fetchData(slug: string) {
+//   const convertedSlug = slug.replace(/[-_]/, "");
+//   const links: linkTree = data;
+//   return links[convertedSlug];
+// }
 
 export async function postData(key: string, name: string, link: string) {
   const bodyData = {
@@ -75,7 +74,7 @@ export async function updateData(
   key: string,
   name: string,
   link: string,
-  index: string,
+  index: string
 ) {
   if (!key || !name || !link || !index) return;
   const updatedData = await fetch("/api/links/", {
