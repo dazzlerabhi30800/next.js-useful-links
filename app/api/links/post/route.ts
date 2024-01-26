@@ -13,7 +13,7 @@ export async function POST(req: Request) {
     link,
   };
 
-  // data[key].push(newData);
-  // fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-  return NextResponse.json(newData);
+  data[key].push(newData);
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  return NextResponse.json(data);
 }
