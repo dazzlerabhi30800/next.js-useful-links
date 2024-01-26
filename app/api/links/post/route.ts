@@ -3,7 +3,7 @@ import fs from "fs";
 import { NextApiResponse } from "next";
 import { join } from "path";
 
-const filePath = process.cwd() + "/tmp/links.json";
+const filePath = process.cwd() + "/var/task/tmp/links.json";
 // const filePath = join("/tmp", "links.json");
 // export async function POST(req: Request, res: NextApiResponse) {
 export async function POST(req: NextRequest, res: NextApiResponse) {
