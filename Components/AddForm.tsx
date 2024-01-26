@@ -16,12 +16,17 @@ export default function AddForm({ slug, setLinkData }: formProps) {
     const convertedSlug = slug.replace(/[-_]/, "");
     if (titleString.length < 2 || linkString.length < 2) return;
     try {
-      const data = await postData(convertedSlug, titleString, linkString);
+      const response = await fetch("/api/links/post", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      });
+      const data = await response.json();
       if (!data) return;
       setLinkData(data[convertedSlug]);
       closeAddModal();
-    }
-    catch(error: any) {
+    } catch (error: any) {
       console.log(error);
     }
   };
