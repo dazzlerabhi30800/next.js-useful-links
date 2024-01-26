@@ -3,6 +3,7 @@ import { postData } from "@/data/Funcs";
 import { formProps } from "@/type";
 import { FormEvent } from "react";
 import { XMarkIcon } from "@heroicons/react/20/solid";
+import axios from "axios";
 export default function AddForm({ slug, setLinkData }: formProps) {
   const {
     setLinkString,
@@ -16,23 +17,18 @@ export default function AddForm({ slug, setLinkData }: formProps) {
     const convertedSlug = slug.replace(/[-_]/, "");
     if (titleString.length < 2 || linkString.length < 2) return;
     try {
-      const response = await fetch("/api/links/post", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-        body: JSON.stringify({
-          key: convertedSlug,
-          name: titleString,
-          link: linkString,
-        }),
+      axios;
+      const response = await axios.post("/api/links/post", {
+        key: convertedSlug,
+        name: titleString,
+        link: linkString,
       });
-      if (!response) return;
-      const data = await response.json();
-      if (!data) return;
+      const { data } = response;
+      // console.log(JSON.parse(data.config.data));
       console.log(data);
-      // setLinkData(data[convertedSlug]);
-      // closeAddModal();
+      if (!data) return;
+      setLinkData(data[convertedSlug]);
+      closeAddModal();
     } catch (error: any) {
       console.log(error);
     }
