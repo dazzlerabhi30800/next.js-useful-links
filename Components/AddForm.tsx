@@ -29,8 +29,9 @@ export default function AddForm({ slug, setLinkData }: formProps) {
       });
       const data = await response.json();
       if (!data) return;
-      setLinkData(data[convertedSlug]);
-      closeAddModal();
+      console.log(data);
+      // setLinkData(data[convertedSlug]);
+      // closeAddModal();
     } catch (error: any) {
       console.log(error);
     }
