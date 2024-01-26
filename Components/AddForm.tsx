@@ -25,10 +25,10 @@ export default function AddForm({ slug, setLinkData }: formProps) {
       });
       const { data } = response;
       // console.log(JSON.parse(data.config.data));
-      console.log(data);
       if (!data) return;
-      setLinkData(data[convertedSlug]);
-      closeAddModal();
+      console.log(data);
+      // setLinkData(data[convertedSlug]);
+      // closeAddModal();
     } catch (error: any) {
       console.log(error);
     }

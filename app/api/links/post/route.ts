@@ -1,9 +1,10 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import { NextApiResponse } from "next";
 
 const filePath = process.cwd() + "/data/links.json";
-export async function POST(req: Request, res: NextApiResponse) {
+// export async function POST(req: Request, res: NextApiResponse) {
+export async function POST(req: NextRequest, res: NextApiResponse) {
   const status = await req.json();
   const { key, name, link } = status;
 
@@ -17,6 +18,6 @@ export async function POST(req: Request, res: NextApiResponse) {
   data[key].push(newData);
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 
-  return NextResponse.json(data);
-  // return NextResponse.json(newData);
+  // return NextResponse.json(data);
+  return new NextResponse(data);
 }
