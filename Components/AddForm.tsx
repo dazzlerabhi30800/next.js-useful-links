@@ -11,24 +11,22 @@ export default function AddForm({ slug, setLinkData }: formProps) {
     titleString,
     linkString,
     closeAddModal,
+    addLink
   } = useLinkContext();
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const convertedSlug = slug.replace(/[-_]/, "");
     if (titleString.length < 2 || linkString.length < 2) return;
     try {
-      axios;
       const response = await axios.post("/api/links/post", {
         key: convertedSlug,
         name: titleString,
         link: linkString,
       });
       const { data } = response;
-      // console.log(JSON.parse(data.config.data));
       if (!data) return;
-      console.log(data);
       setLinkData(data[convertedSlug]);
-      // closeAddModal();
+      closeAddModal();
     } catch (error: any) {
       console.log(error);
     }
@@ -41,6 +39,7 @@ export default function AddForm({ slug, setLinkData }: formProps) {
           <input
             onChange={(e) => setTitleString(e.target.value)}
             type="text"
+            autoFocus={addLink}
             id="title"
             placeholder="enter the title"
           />

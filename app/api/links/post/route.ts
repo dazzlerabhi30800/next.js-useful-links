@@ -23,8 +23,8 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
     // fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
     fs.writeFileSync("tmp/links.json", JSON.stringify(data, null, 2));
 
-    // return NextResponse.json(data);
-    return new NextResponse(data, { status: 200 });
+    return NextResponse.json(data);
+    // return new NextResponse(data, { status: 200 });
   } catch (error: any) {
     return new NextResponse(error, { status: 400 });
   }
